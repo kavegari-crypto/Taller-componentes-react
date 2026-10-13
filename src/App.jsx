@@ -22,24 +22,28 @@ function App() {
             material="Concreto"
             categoria="Estructural"
             costo={19500000}
+            imagen="https://images.unsplash.com/photo-1517089596392-fb9a9033e05b?auto=format&fit=crop&w=800&q=80"
           />
 
           <Card
             material="Pintura"
             categoria="Acabados"
             costo={10200000}
+            imagen="https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=800&q=80"
           />
 
           <Card
             material="Arena"
             categoria="Estructural"
             costo={55000000}
+            imagen="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80"
           />
 
           <Card
             material="Baldosa"
             categoria="Acabado"
             costo={72000000}
+            imagen="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80"
           />
         </section>
       </main>

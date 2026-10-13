@@ -1,10 +1,14 @@
 import "./Card.css";
 
-function Card({ material, categoria, costo }) {
+function Card({ material, categoria, costo, imagen }) {
   return (
     <article className="card">
       <div className="card-icon">
-        <span>👽</span>
+        <img
+          src={imagen}
+          alt={`Imagen de ${material}`}
+          className="card-image"
+        />
       </div>
 
       <div className="card-content">
