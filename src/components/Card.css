@@ -1,0 +1,82 @@
+.card {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
+}
+
+.card-icon {
+  display: grid;
+  place-items: center;
+  min-width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  background: #dbeafe;
+  font-size: 28px;
+}
+
+.card-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.card-category {
+  margin: 0 0 8px;
+  color: #2563eb;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.card h2 {
+  margin: 0 0 20px;
+  color: #172554;
+  font-size: 1.4rem;
+  text-transform: capitalize;
+}
+
+.card-cost {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-top: 16px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.card-cost span {
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.card-cost strong {
+  color: #15803d;
+  font-size: 1.25rem;
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 18px;
+    gap: 12px;
+  }
+
+  .card-icon {
+    min-width: 44px;
+    height: 44px;
+    font-size: 22px;
+  }
+
+  .card-cost strong {
+    font-size: 1.05rem;
+  }
+}
