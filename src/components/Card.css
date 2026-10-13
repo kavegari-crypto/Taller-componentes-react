@@ -1,42 +1,63 @@
 .card {
   display: flex;
-  gap: 18px;
-  align-items: flex-start;
-  padding: 24px;
+  flex-direction: column;
+  overflow: hidden;
+  min-width: 0;
+  padding: 0;
   background: #ffffff;
   border: 1px solid #e2e8f0;
-  border-radius: 14px;
-  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.07);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.12);
 }
 
+/* Imagen del material */
 .card-icon {
-  display: grid;
-  place-items: center;
-  min-width: 56px;
-  height: 56px;
-  border-radius: 12px;
-  background: #dbeafe;
-  font-size: 28px;
+  width: 100%;
+  height: 220px;
+  padding: 0;
+  overflow: hidden;
+  background: #e2e8f0;
 }
 
+.card-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.35s ease;
+}
+
+.card:hover .card-image {
+  transform: scale(1.04);
+}
+
+/* Información */
 .card-content {
+  display: flex;
+  flex-direction: column;
   flex: 1;
+  padding: 22px;
   min-width: 0;
 }
 
 .card-category {
-  margin: 0 0 8px;
-  color: #2563eb;
-  font-size: 0.8rem;
+  align-self: flex-start;
+  margin: 0 0 10px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
 }
 
 .card h2 {
@@ -49,7 +70,8 @@
 .card-cost {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 8px;
+  margin-top: auto;
   padding-top: 16px;
   border-top: 1px solid #e2e8f0;
 }
@@ -61,30 +83,20 @@
 
 .card-cost strong {
   color: #15803d;
-  font-size: 1.25rem;
+  font-size: 1.3rem;
+  overflow-wrap: anywhere;
 }
 
 @media (max-width: 480px) {
-  .card {
+  .card-icon {
+    height: 190px;
+  }
+
+  .card-content {
     padding: 18px;
-    gap: 12px;
   }
 
   .card-cost strong {
-    font-size: 1.05rem;
+    font-size: 1.15rem;
   }
-}
-
-.card-icon {
-  width: 100%;
-  height: 200px;
-  overflow: hidden;
-  background: #e2e8f0;
-}
-
-.card-image {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
